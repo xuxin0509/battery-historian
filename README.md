@@ -73,6 +73,21 @@ go get github.com/google/battery-historian/bugreportutils
 go get github.com/google/battery-historian/historianutils
 ```
 
+For Linux
+```
+$ cd $GOPATH/src/github.com/google/battery-historian
+```
+
+Finally, run Battery Historian, for Windows/Linux!
+
+```
+# Compile Javascript files using the Closure compiler
+$ go run setup.go
+
+# Run Historian on your machine (make sure $PATH contains $GOBIN)
+$ go run cmd/battery-historian/battery-historian.go [--port <default:9999>]
+```
+
 issue:
 ```
  ERROR - Parse error. '}' expected
@@ -81,22 +96,9 @@ issue:
 
 fix issue:
 ```
-# git bash
+# git bash or Linux bash
 cd third_party/closure-library
 git reset --hard v20171203
-```
-
-For Linux
-```
-$ cd $GOPATH/src/github.com/google/battery-historian
-
-# Compile Javascript files using the Closure compiler
-$ go run setup.go
-```
-Finally, run Battery Historian!
-```
-# Run Historian on your machine (make sure $PATH contains $GOBIN)
-$ go run cmd/battery-historian/battery-historian.go [--port <default:9999>]
 ```
 
 Remember, you must always run battery-historian from inside the `$GOPATH/src/github.com/google/battery-historian` directory:
