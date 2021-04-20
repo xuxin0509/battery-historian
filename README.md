@@ -68,7 +68,9 @@ $ go get -d -u github.com/google/battery-historian/...
 
 For Windows
 ```
-cd pkg\mod\github.com\google\battery-historian@v0.0.0-20170519220231-d2356ba4fd5f
+cd pkg\mod\github.com\google\
+go mod init battery-historian@v0.0.0-20170519220231-d2356ba4fd5f
+cd battery-historian@v0.0.0-20170519220231-d2356ba4fd5f
 go get github.com/google/battery-historian/bugreportutils
 go get github.com/google/battery-historian/historianutils
 ```
