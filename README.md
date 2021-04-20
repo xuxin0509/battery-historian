@@ -66,14 +66,35 @@ Next, download the Battery Historian code and its dependencies:
 $ go get -d -u github.com/google/battery-historian/...
 ```
 
-Finally, run Battery Historian!
+For Windows
+```
+cd pkg\mod\github.com\google\battery-historian@v0.0.0-20170519220231-d2356ba4fd5f
+go get github.com/google/battery-historian/bugreportutils
+go get github.com/google/battery-historian/historianutils
+```
 
+issue:
+```
+ ERROR - Parse error. '}' expected
+ ERROR - Parse error. '(' expected
+```
+
+fix issue:
+```
+# git bash
+cd third_party/closure-library
+git reset --hard v20171203
+```
+
+For Linux
 ```
 $ cd $GOPATH/src/github.com/google/battery-historian
 
 # Compile Javascript files using the Closure compiler
 $ go run setup.go
-
+```
+Finally, run Battery Historian!
+```
 # Run Historian on your machine (make sure $PATH contains $GOBIN)
 $ go run cmd/battery-historian/battery-historian.go [--port <default:9999>]
 ```
